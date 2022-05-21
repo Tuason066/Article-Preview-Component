@@ -1,0 +1,202 @@
+// font family
+$ff-manrope: 'Manrope', sans-serif;
+
+// colors
+$clr-Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+$clr-Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+$clr-Grayish-Blue: hsl(212, 23%, 69%);
+$bg-Light-Grayish-Blue: hsl(210, 46%, 95%);
+
+* {
+    font-family: $ff-manrope;
+}
+
+body {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: $bg-Light-Grayish-Blue;
+}
+
+// card
+.my-card {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: .5rem !important;
+    &__image {
+        border-top-left-radius: .5rem;
+        border-top-right-radius: .5rem;
+        overflow: hidden;
+    }
+}
+
+// content
+.content {
+    &__header {
+        color: $clr-Very-Dark-Grayish-Blue;
+    }
+    &__desc {
+        color: $clr-Desaturated-Dark-Blue;
+        font-size: 13px;
+    }
+}
+
+
+// profile
+.user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__profile img {
+        width: 2.75rem;
+        height: 2.75rem;
+    }
+    &__header {
+        color: $clr-Very-Dark-Grayish-Blue;
+        font-size: 1rem;
+    }
+    &__desc {
+        color: $clr-Grayish-Blue;
+        font-size: .875rem;
+    }
+
+}
+
+// links
+.user__links--items {
+    display: none;
+    & .share {
+        color: $clr-Grayish-Blue;
+        letter-spacing: .25rem;
+        font-size: .875rem;
+    }
+}
+
+.link-button {
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $bg-Light-Grayish-Blue;
+    & i {
+        font-size: .875rem;
+        color: $clr-Desaturated-Dark-Blue;
+    }
+}
+
+.show-link {
+    background-color: $clr-Very-Dark-Grayish-Blue;
+    border-bottom-left-radius: .5rem !important;
+    border-bottom-right-radius: .5rem !important;
+    & .link-button {
+        background-color: $clr-Desaturated-Dark-Blue;
+        & i {
+            color: #fff;
+        }
+    }
+    & .user__profile {
+        display: none !important;
+    }
+    & .user__link {
+        width: 100%;
+        transition: all 0.4s ease;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+    }
+    & .user__links--items {
+        display: flex;
+        align-items: center;
+        justify-content:center;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .container {
+        padding: 5rem 1.5rem 1rem !important;
+    }
+
+    // ==============   CARD  =================
+    .my-card {
+        max-width: 950px;
+
+        &__image {
+            border-top-left-radius: .5rem;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: .5rem;
+        }
+
+        &__description {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 0 2rem .5rem;
+        }
+    }
+    // USER
+    .user {
+
+        &__header {
+            font-size: 1.5rem;
+        }
+        &__desc {
+            font-size: 1rem;
+        }
+    }
+
+    // LINKS
+    .show-link {
+        background-color: transparent;
+        border-bottom-left-radius: .5rem !important;
+        border-bottom-right-radius: .5rem !important;
+        & .link-button {
+            color: #fff;
+            background-color: $clr-Desaturated-Dark-Blue;
+        }
+        & .user__profile {
+            display: flex !important;
+        }
+        & .user__link {
+            width: auto;
+            display: block;
+        }
+        & .user__links--items {
+            position: absolute;
+            top: -270%;
+            right: -350%;
+
+            background-color: $clr-Very-Dark-Grayish-Blue;
+            padding: 1rem 2rem;
+            border-radius: .5rem;
+            &::before {
+                content: "";
+                border: 1rem solid;
+                border-color: $clr-Very-Dark-Grayish-Blue transparent transparent transparent;
+                position: absolute;
+                top: 100%;
+                left: 45%;
+            }
+        }
+    }
+
+}
+
+
+footer p {
+    font-size: .7rem;
+    letter-spacing: 1px;
+}
+
+@media (min-width: 1200px) {
+    footer p {
+        font-size: .875rem;
+    }
+}

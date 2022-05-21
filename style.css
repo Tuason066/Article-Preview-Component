@@ -1,0 +1,218 @@
+* {
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #ecf2f8;
+}
+
+.my-card {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: .5rem !important;
+}
+
+.my-card__image {
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+  overflow: hidden;
+}
+
+.content__header {
+  color: #48556a;
+}
+
+.content__desc {
+  color: #6d7f97;
+  font-size: 13px;
+}
+
+.user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.user__profile img {
+  width: 2.75rem;
+  height: 2.75rem;
+}
+
+.user__header {
+  color: #48556a;
+  font-size: 1rem;
+}
+
+.user__desc {
+  color: #9eafc2;
+  font-size: .875rem;
+}
+
+.user__links--items {
+  display: none;
+}
+
+.user__links--items .share {
+  color: #9eafc2;
+  letter-spacing: .25rem;
+  font-size: .875rem;
+}
+
+.link-button {
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #ecf2f8;
+}
+
+.link-button i {
+  font-size: .875rem;
+  color: #6d7f97;
+}
+
+.show-link {
+  background-color: #48556a;
+  border-bottom-left-radius: .5rem !important;
+  border-bottom-right-radius: .5rem !important;
+}
+
+.show-link .link-button {
+  background-color: #6d7f97;
+}
+
+.show-link .link-button i {
+  color: #fff;
+}
+
+.show-link .user__profile {
+  display: none !important;
+}
+
+.show-link .user__link {
+  width: 100%;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.show-link .user__links--items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    padding: 5rem 1.5rem 1rem !important;
+  }
+  .my-card {
+    max-width: 950px;
+  }
+  .my-card__image {
+    border-top-left-radius: .5rem;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: .5rem;
+  }
+  .my-card__description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 2rem .5rem;
+  }
+  .user__header {
+    font-size: 1.5rem;
+  }
+  .user__desc {
+    font-size: 1rem;
+  }
+  .show-link {
+    background-color: transparent;
+    border-bottom-left-radius: .5rem !important;
+    border-bottom-right-radius: .5rem !important;
+  }
+  .show-link .link-button {
+    color: #fff;
+    background-color: #6d7f97;
+  }
+  .show-link .user__profile {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+  .show-link .user__link {
+    width: auto;
+    display: block;
+  }
+  .show-link .user__links--items {
+    position: absolute;
+    top: -270%;
+    right: -350%;
+    background-color: #48556a;
+    padding: 1rem 2rem;
+    border-radius: .5rem;
+  }
+  .show-link .user__links--items::before {
+    content: "";
+    border: 1rem solid;
+    border-color: #48556a transparent transparent transparent;
+    position: absolute;
+    top: 100%;
+    left: 45%;
+  }
+}
+
+footer p {
+  font-size: .7rem;
+  letter-spacing: 1px;
+}
+
+@media (min-width: 1200px) {
+  footer p {
+    font-size: .875rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
