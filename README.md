@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Tuason066/Article-Preview-Component)
-- Live Site URL: [Add live site URL here](https://tuason066.github.io/Article-Preview-Component/)
+- Solution URL: [https://github.com/Tuason066/Article-Preview-Component](https://github.com/Tuason066/Article-Preview-Component)
+- Live Site URL: [https://tuason066.github.io/Article-Preview-Component/](https://tuason066.github.io/Article-Preview-Component/)
 
 ## My process
 
