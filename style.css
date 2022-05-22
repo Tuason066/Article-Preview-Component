@@ -43,6 +43,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
 .user__profile img {
@@ -53,15 +55,27 @@ body {
 .user__header {
   color: #48556a;
   font-size: 1rem;
+  white-space: nowrap;
 }
 
 .user__desc {
   color: #9eafc2;
   font-size: .875rem;
+  white-space: nowrap;
 }
 
 .user__links--items {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 0px;
+  overflow: hidden;
 }
 
 .user__links--items .share {
@@ -86,11 +100,15 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #ecf2f8;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
 .link-button i {
   font-size: .875rem;
   color: #6d7f97;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
 .show-link {
@@ -108,13 +126,14 @@ body {
 }
 
 .show-link .user__profile {
-  display: none !important;
+  width: 0px;
+  overflow: hidden;
 }
 
 .show-link .user__link {
   width: 100%;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -127,15 +146,9 @@ body {
 }
 
 .show-link .user__links--items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 @media (min-width: 1200px) {
@@ -179,13 +192,10 @@ body {
     background-color: #6d7f97;
   }
   .show-link .user__profile {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
+    width: auto;
   }
   .show-link .user__link {
     width: auto;
-    display: block;
   }
   .show-link .user__links--items {
     position: absolute;
@@ -194,6 +204,7 @@ body {
     background-color: #48556a;
     padding: 1rem 2rem;
     border-radius: .5rem;
+    overflow: visible;
   }
   .show-link .user__links--items::before {
     content: "";
