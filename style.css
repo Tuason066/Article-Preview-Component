@@ -45,6 +45,7 @@ body {
           align-items: center;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
+  background-color: transparent;
 }
 
 .user__profile img {
